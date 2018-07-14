@@ -15,7 +15,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install \
     dask \
-    distributed
+    distributed \
+    # Bokeh for web UI
+    bokeh
 
 COPY prepare.sh /usr/bin/prepare.sh
 RUN chmod +x /usr/bin/prepare.sh
