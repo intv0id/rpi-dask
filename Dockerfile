@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     #Atlas for numpy
     libatlas-base-dev
 
-RUN pip3 --no-cache-dir install \
+RUN pip3 install -U pip3
+
+RUN pip3 install \
     setuptools \
     pandas \
     numpy
