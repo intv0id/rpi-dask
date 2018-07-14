@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     build-essential \
-    python-dev \
+    python3-dev \
     #Atlas for numpy
     libatlas-base-dev \
     # Numpy
