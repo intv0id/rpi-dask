@@ -10,9 +10,10 @@ RUN apt-get update && apt-get install -y \
     libatlas-base-dev
 
 RUN pip3 --no-cache-dir install \
+    setuptools \
     pandas \
     numpy
-    
+
 RUN pip3 install \
     dask \
     distributed \
