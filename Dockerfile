@@ -7,12 +7,12 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     python3-dev \
     #Atlas for numpy
-    libatlas-base-dev \
-    # Numpy
-    python3-numpy \
-    python3-pandas
+    libatlas-base-dev
 
-
+RUN pip3 --no-cache-dir install \
+    pandas \
+    numpy
+    
 RUN pip3 install \
     dask \
     distributed \
