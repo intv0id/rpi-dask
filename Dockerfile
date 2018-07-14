@@ -1,7 +1,6 @@
 FROM resin/rpi-raspbian:jessie
 
-RUN apt update
-RUN apt install -y \
+RUN apt-get update && apt-get install -y \
     apt-utils \
     python3 \
     python3-pip \
