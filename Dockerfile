@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     python3 \
     python3-pip \
+    python \
+    python-pip \
     build-essential \
     python3-dev \
     #Atlas for numpy
@@ -16,9 +18,9 @@ RUN pip3 install \
 
 RUN pip3 install \
     dask \
-    distributed \
-    # Bokeh for web UI
-    bokeh
+    distributed
+
+RUN pip install bokeh
 
 COPY prepare.sh /usr/bin/prepare.sh
 RUN chmod +x /usr/bin/prepare.sh
