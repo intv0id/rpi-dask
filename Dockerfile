@@ -21,7 +21,7 @@ RUN pip3 install \
     dask \
     distributed
 
-RUN pip3 install  \
+RUN pip install  \
     bokeh \
     pyasn1
 
