@@ -21,7 +21,10 @@ RUN pip3 install \
     dask \
     distributed
 
-RUN pip install bokeh
+RUN pip3 install  \
+    bokeh \
+    pyasn1
+
 
 COPY prepare.sh /usr/bin/prepare.sh
 RUN chmod +x /usr/bin/prepare.sh
