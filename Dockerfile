@@ -22,8 +22,9 @@ RUN pip3 install \
     distributed
 
 RUN pip install  \
-    bokeh \
-    pyasn1
+    bokeh
+
+RUN pip install --upgrade bokeh
 
 
 COPY prepare.sh /usr/bin/prepare.sh
