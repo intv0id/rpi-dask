@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     build-essential \
     python3-dev \
+    python-dev \
     #Atlas for numpy
     libatlas-base-dev
 
