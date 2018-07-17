@@ -21,10 +21,10 @@ RUN pip3 install \
     dask \
     distributed
 
-RUN pip install  \
+RUN pip3 install  \
     bokeh
 
-RUN pip install --upgrade bokeh
+RUN pip3 install --upgrade bokeh
 
 
 COPY prepare.sh /usr/bin/prepare.sh
