@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  daskscheduler:
+    image: intvoid/dask
+    hostname: dask-scheduler
+    ports:
+      - "8786:8786"
+      - "8787:8787"
+    command: ["dask-scheduler"]
+    labels:
+      - traefik.frontend.rules=PathPrefixStrip:/dask/
+      - traefik.port=8787
+
+  daskworker:
+    image: daskdev/dask
+    hostname: dask-worker
+    command: ["dask-worker daskscheduler:8786"]
+
+  dasknotebook:
+    build:
+      context: ./notebook
+      dockerfile: Dockerfile
+    image: daskdev/dask-notebook
+    hostname: notebook
+    labels:
+      - traefik.frontend.rule=PathPrefixStrip:/notebook/
+      - traefik.port=8888
