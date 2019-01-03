@@ -12,7 +12,7 @@ services:
       - traefik.port=8787
 
   daskworker:
-    image: daskdev/dask
+    image: intvoid/dask
     hostname: dask-worker
     command: ["dask-worker daskscheduler:8786"]
 
